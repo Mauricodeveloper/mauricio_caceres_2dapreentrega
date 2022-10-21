@@ -1,0 +1,934 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(115, 202, 202);
+}
+
+h1{
+    font-size: 4.5rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+
+
+
+
+/*estilo flex*/
+.container{
+    max-width: 1600px;
+    margin:auto;
+}
+
+.colorContenido{
+    color:blue;
+}
+
+header{
+    background-color: rgb(13, 28, 23);
+}
+
+header .logo{
+    margin:0;
+    height: 300px;
+    padding: 30px 35px;
+    border-radius: 180px;
+}
+
+header .container{
+display: flex;
+flex-direction:column;
+align-items:center;
+}
+
+header nav{
+display: flex;
+flex-direction:row;
+text-align:center;
+padding-bottom: 30px;
+}
+
+header a{
+    padding: 6px 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color:orange;
+    transition: margin-left .80s;
+}
+
+header a:hover{
+    color:lightgreen;
+    margin-left: 30px;
+}
+
+/*estilo del banner con flex*/
+
+#banner{
+display: flex;
+align-items: center;
+justify-content:center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+color:bisque;
+background-image: url(../i_mgs/banner3.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center center;
+}
+
+#banner h1{
+    color:whitesmoke;
+}
+
+
+/*estilo main index con grid*/
+
+.contenido{
+    display: grid;
+    grid-template-areas: 
+    "subtitulo   subtitulo      subtitulo      subtitulo"
+    "descripcion descripcion    imagenuno       imagenuno"
+    "imagendos  imagentres    imagencuatro  imagencinco";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 400px auto;
+    justify-items: center;
+    align-items:stretch;
+}
+
+.subtitulo{
+    grid-area: subtitulo;
+}
+
+.Descripcion{
+    grid-area: descripcion;
+    text-align:justify;
+    margin: 80px;
+    font-family: fantasy;
+}
+
+.imagenUno{
+    grid-area: imagenuno;
+}
+
+.imagenDos{
+    grid-area: imagendos;
+}
+
+.imagenTres{
+    grid-area: imagentres;
+}
+
+.imagenCuatro{
+    grid-area: imagencuatro;
+}
+.imagenCinco{
+    grid-area: imagencinco;
+    
+}
+
+.contenido img{
+    width: 300px;
+
+}
+
+
+/*estilo footer con flexbox*/
+
+footer{
+    max-width: 1600px;
+    margin: 0;
+    background-color: rgb(13, 28, 23);
+    display: flex;
+}
+footer .finalSeccion,
+footer .derechos{
+    color:orange;
+    display: flex;
+    flex-direction: row;
+}
+
+.redes{
+    display: flex;
+    justify-content:center;
+}
+.redes i{
+    font-size: 30px;
+    padding: 0 8px;
+    display:flex;
+    justify-content:left;
+}
+
+
+
+/*estilos para Marca*/
+/*estilo flex*/
+.containerHeader{
+    max-width: 1600px;
+    margin:auto;
+}
+
+.colorContenido{
+    color:blue;
+}
+
+header{
+    background-color: rgb(13, 28, 23);
+}
+
+header .logo{
+    margin:0;
+    height: 300px;
+    padding: 30px 35px;
+    border-radius: 180px;
+}
+
+header .containerHeader{
+display: flex;
+flex-direction:column;
+align-items:center;
+}
+
+/*estilo del menu para MARCA*/
+nav{
+    max-width: 1600px;
+    margin:auto;
+    margin-top: 50px;
+}
+
+.menuHorizontal{
+    list-style: none;
+    display: flex;
+}
+
+.menuHorizontal li{
+    display:block;
+    transition: all;
+}
+
+.menuVertical{
+    position:absolute;
+    display: none;
+    width: 200px;
+}
+
+
+.menuHorizontal li:hover .menuVertical{
+    display: block;
+}
+
+.menuVertical li:hover{
+    background-color: black;
+}
+
+.menuVertical li{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+}
+
+/*estilo del banner con flex*/
+
+#hero{
+display: flex;
+align-items: center;
+justify-items:center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+color:bisque;
+background-image: url(../i_mgs/banner3.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+#hero h1{
+    color:whitesmoke;
+}
+
+
+
+/*estilo main Marcas*/
+/*main con  grid*/
+
+
+.contenidoMarcas{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "img1    img1    img2"
+    "img3    img4    img5";
+  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 500px auto;
+    justify-items:center;
+    align-items:center;
+}
+
+.tituloMarcas{
+    grid-area: titulo;
+    color: rgb(97, 84, 9);
+   
+}
+
+
+.img1{
+    grid-area: img1;
+    border-radius: 45px;
+}
+
+.img2{
+    grid-area: img2;
+    border-radius: 30px;
+}
+
+.img3{
+    grid-area:img3 ;
+    border-radius: 25px;
+}
+
+.img4{
+    grid-area:img4 ;
+    border-radius: 45px;
+}
+
+.img5{
+    grid-area:img5 ;
+    border-radius: 50px;
+}
+
+/*footer para Marca
+hecho con flexbox*/
+
+footer{
+    max-width: 1600px;
+    margin: 0;
+    background-color: rgb(13, 28, 23);
+    display: flex;
+}
+footer .finalSeccion,
+footer .derechos{
+    color:orange;
+    display: flex;
+    flex-direction: row;
+}
+
+.Redes{
+    display: flex;
+    justify-content:center;
+}
+.Redes i{
+    font-size: 30px;
+    padding: 0 8px;
+    display:flex;
+    justify-content:left;
+}
+
+
+
+
+/*estilos para productos*/
+
+.colorProducto{
+    background-color: darkseagreen;
+}
+    
+
+
+.containerHeader{
+    max-width: 1600px;
+    margin:auto;
+}
+
+.colorContenido{
+    color:blue;
+}
+
+header{
+    background-color: rgb(13, 28, 23);
+}
+
+header .logo{
+    margin:0;
+    height: 300px;
+    padding: 30px 35px;
+    border-radius: 180px;
+}
+
+header .containerHeader{
+display: flex;
+flex-direction:column;
+align-items:center;
+}
+
+/*estilo del menu para PRODUCTOS*/
+nav{
+    max-width: 1600px;
+    margin:auto;
+    margin-top: 50px;
+}
+
+.menuHorizontal{
+    list-style: none;
+    display: flex;
+}
+
+.menuHorizontal li{
+    display:block;
+    transition: all;
+}
+
+.misProductos{
+    position:absolute;
+    display: none;
+    width: 200px;
+}
+
+
+.menuHorizontal li:hover .misProductos{
+    display: block;
+}
+
+.misProductos li:hover{
+    background-color: black;
+}
+
+.misProductos li{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+}
+
+/*estilo del banner con flex*/
+
+#hero2{
+display: flex;
+align-items: center;
+justify-items:center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+color:bisque;
+background-image: url(../i_mgs/nwerabanner.png);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+#hero h1{
+    color:whitesmoke;
+}
+
+
+
+/*estilo main PRODUCTOS*/
+/*main con  grid*/
+
+
+.contenidoProductos{
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo titulo titulo "
+    "texto   img1  img2    img3"
+    "img4    img5   img6   img7";
+  
+    grid-template-columns: 5fr  5fr  5fr 5fr;
+    grid-template-rows: 50px 500px auto;
+    justify-items:center;
+    align-items:center;
+}
+
+.tittleProductos{
+    grid-area: titulo;
+    color: rgb(97, 84, 9);
+    padding-top: 5%;
+    font-size: 60px;
+
+   
+}
+
+
+.texto{
+    grid-area: texto;
+    margin-left: 30px;
+    color: rgb(216, 201, 237);
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-size: 30px;
+    animation: move 3s ease-in-out infinite;
+}
+/*-------animacion para el texto del main-------*/
+
+@keyframes move{
+0%{
+    transform: translate(-30% 0);
+}
+50%{
+    text-shadow: 0 25px 50px rgba(1, 26, 27, 0.75);
+}
+100%{
+    transform: translate(0 30%);
+}
+}
+
+
+.pic1{
+    grid-area: img1;
+    width: 60%;
+    border-radius: 45px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+.pic2{
+    grid-area: img2;
+    width: 70%;
+    border-radius: 30px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+.pic3{
+    grid-area:img3 ;
+    border-radius: 25px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+.pic4{
+    grid-area:img4 ;
+    width: 70%;
+    border-radius: 45px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+.pic5{
+    grid-area:img5 ;
+    width: 70%;
+    border-radius: 50px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+
+.pic6{
+    grid-area:img6 ;
+    width: 70%;
+    border-radius: 50px;
+    box-shadow: 0 15px 25px
+    rgba(0,0,0,0.50);
+}
+
+.pic7{
+grid-area: img7;
+width: 400px;
+height: 200px;
+padding-right: 20px;
+border-radius: 30px;
+box-shadow: 0 15px 25px
+rgba(0,0,0,0.50);
+}
+
+
+
+
+
+/*footer para PRODUCTOS
+hecho con flexbox*/
+
+footer{
+    max-width: 1600px;
+    margin: 0;
+    background-color: rgb(13, 28, 23);
+    display: flex;
+}
+footer .finalSeccion,
+footer .derechos{
+    color:orange;
+    display: flex;
+    flex-direction: row;
+}
+
+.Redes{
+    display: flex;
+    justify-content:center;
+}
+.Redes i{
+    font-size: 30px;
+    padding: 0 8px;
+    display:flex;
+    justify-content:left;
+}
+
+
+
+/*------estilos para QUIENES SOMOS------*/
+
+.colorProducto{
+    background-color: darkseagreen;
+}
+    
+
+
+.containerHeader{
+    max-width: 1600px;
+    margin:auto;
+}
+
+.colorContenido{
+    color:blue;
+}
+
+header{
+    background-color: rgb(13, 28, 23);
+}
+
+header .logo{
+    margin:0;
+    height: 300px;
+    padding: 30px 35px;
+    border-radius: 180px;
+}
+
+header .containerHeader{
+display: flex;
+flex-direction:column;
+align-items:center;
+}
+
+/*estilo del menu para Quienes Somos*/
+nav{
+    max-width: 1600px;
+    margin:auto;
+    margin-top: 50px;
+}
+
+.menuHorizontal{
+    list-style: none;
+    display: flex;
+}
+
+.menuHorizontal li{
+    display:block;
+    transition: all;
+}
+
+.misProductos{
+    position:absolute;
+    display: none;
+    width: 200px;
+}
+
+
+.menuHorizontal li:hover .misProductos{
+    display: block;
+}
+
+.misProductos li:hover{
+    background-color: black;
+}
+
+.misProductos li{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+}
+
+/*estilo del banner con flex*/
+
+#hero2{
+display: flex;
+align-items: center;
+justify-items:center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+color:bisque;
+background-image: url(../i_mgs/banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+#hero h1{
+    color:whitesmoke;
+}
+
+
+/*estilo para el main con flexbox*/
+
+.splash{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../i_mgs/hombre_bicicleta.jpg);
+    background-size: 100vw 100vh;
+    background-repeat:no-repeat;
+}
+
+
+.capa{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #38273b;
+    opacity: 0.7;
+}
+
+.splash h2{
+    z-index: 1;
+    color: beige;
+    font-size: 60px;
+}
+
+
+.parrafo{
+    z-index: 1;
+    width: 600px;
+    height: 500px;
+    padding: 20px 20px;
+    font-size: 25px;
+    line-height: 1.5;
+    background: rgb(255, 255, 255);
+    box-shadow: 1px 5px 25px
+    rgba(0,0,0,0.45);
+    border-radius: 6px;
+    text-align: justify;
+}
+
+.parrafo img{
+    width: 400px;
+    border-radius: 8px;
+    float: right;
+    margin-right: 15px;
+}
+
+
+
+/*footer para Quienes Somos
+hecho con flexbox*/
+
+footer{
+    max-width: 1600px;
+    margin: 0;
+    background-color: rgb(13, 28, 23);
+    display: flex;
+}
+footer .finalSeccion,
+footer .derechos{
+    color:orange;
+    display: flex;
+    flex-direction: row;
+}
+
+.Redes{
+    display: flex;
+    justify-content:center;
+}
+.Redes i{
+    font-size: 30px;
+    padding: 0 8px;
+    display:flex;
+    justify-content:left;
+}
+
+
+
+/*-----estilos CONTACTO-------*/
+
+/*estilo flex*/
+.container{
+    max-width: 1600px;
+    margin:auto;
+}
+
+.colorContenido{
+    color:blue;
+}
+
+header{
+    background-color: rgb(13, 28, 23);
+}
+
+header .logo{
+    margin:0;
+    height: 300px;
+    padding: 30px 35px;
+    border-radius: 180px;
+}
+
+header .container{
+display: flex;
+flex-direction:column;
+align-items:center;
+}
+
+header nav{
+display: flex;
+flex-direction:row;
+text-align:center;
+padding-bottom: 30px;
+}
+
+header a{
+    padding: 6px 13px;
+    text-decoration: none;
+    font-weight: bold;
+    color:orange;
+    transition: margin-left .80s;
+}
+
+header a:hover{
+    color:lightgreen;
+    margin-left: 30px;
+}
+
+/*estilo del banner con flex*/
+
+#banner{
+display: flex;
+align-items: center;
+justify-content:center;
+text-align: center;
+flex-direction: column;
+height: 90vh;
+color:bisque;
+background-image: url(../i_mgs/banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+
+#banner h1{
+    color:whitesmoke;
+}
+
+
+.contactos1{
+    background-image:linear-gradient(135deg
+    ,#00B7D4,#505488,#2F3F80,#161569,
+    #5A4894,#A950A1,#FF7CAE);
+    background-size: 600px;
+    animation: backnimado 15s infinite;  
+}
+/*animacion para el fondo del main*/
+
+@keyframes backnimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.contactos2{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    color:aliceblue;
+    text-align: center;
+}
+
+
+.contactos2 img{
+    width: 350px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.formularios{
+    width: 400px;
+    background-color: burlywood;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-family: "calibri";
+    color:#38273b;
+}
+
+.formularios h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+
+.controls{
+    width: 100%;
+    background:beige;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgb(239, 176, 94);
+}
+
+.inf{
+    font-family: "calibri";
+    font-size: 20px;
+}
+ 
+
+
+.botones{
+    width: 150px;
+    background: rgb(235, 168, 81);
+    padding: 8px;
+    border: none;
+    color: #38273b;
+    font-size: 15px;
+    margin: 16px 0;
+}
+
+
+/*footer para CONTACTO*/
+footer{
+    max-width: 1600px;
+    margin: 0;
+    background-color: rgb(13, 28, 23);
+    display: flex;
+}
+footer .finalSeccion,
+footer .derechos{
+    color:orange;
+    display: flex;
+    flex-direction: row;
+}
+
+.Redes{
+    display: flex;
+    justify-content:center;
+}
+.Redes i{
+    font-size: 30px;
+    padding: 0 8px;
+    display:flex;
+    justify-content:left;
+}
+
+
+@media (max-width:600px){
+    body{
+        background-color: #38273b;
+    }
+}
